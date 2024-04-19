@@ -24,4 +24,4 @@ The program does not fix real bugs that would need to be done manually. It can a
 The next step of the program could be to influence the design of future buildings from the learned data of existing buildings. The program could analyze existing buildings to determine what works and what doesn't, and give guidance to designers of new buildings.
 
 ## Acknowledgments
- https://github.com/MPa-Engineering/AI-Energy-Manager 
+https://www.scdi.tech/ 
