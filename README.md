@@ -5,7 +5,7 @@ project for BuildingAI
 Monitoring the energy efficiency of buildings
 
 ## Summary
-
+Monitoring the energy efficiency of buildings - the tool will help building owners better manage energy consumption
 
 ## Background
 Buildings generally consume 30% of energy and produce 25% of CO2 emissions. In most older buildings, the savings potential is 20-35%. In some buildings that have an undetected error in their process, the savings potential is even greater.
