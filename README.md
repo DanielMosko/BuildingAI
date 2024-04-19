@@ -2,77 +2,26 @@
 project for BuildingAI
 
 # Project Title
-
-Final project for the Building AI course
+Monitoring the energy efficiency of buildings
 
 ## Summary
 
-Describe briefly in 2-3 sentences what your project is about. About 250 characters is a nice length! 
-
 
 ## Background
-
-Which problems does your idea solve? How common or frequent is this problem? What is your personal motivation? Why is this topic important or interesting?
-
-This is how you make a list, if you need one:
-* problem 1
-* problem 2
-* etc.
-
+Buildings generally consume 30% of energy and produce 25% of CO2 emissions. In most older buildings, the savings potential is 20-35%. In some buildings that have an undetected error in their process, the savings potential is even greater.
 
 ## How is it used?
-
-Describe the process of using the solution. In what kind situations is the solution needed (environment, time, etc.)? Who are the users, what kinds of needs should be taken into account?
-
-Images will make your README look nice!
-Once you upload an image to your repository, you can link link to it like this (replace the URL with file path, if you've uploaded an image to Github.)
-![Cat](https://upload.wikimedia.org/wikipedia/commons/5/5e/Sleeping_cat_on_her_back.jpg)
-
-If you need to resize images, you have to use an HTML tag, like this:
-<img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Sleeping_cat_on_her_back.jpg" width="300">
-
-This is how you create code examples:
-```
-def main():
-   countries = ['Denmark', 'Finland', 'Iceland', 'Norway', 'Sweden']
-   pop = [5615000, 5439000, 324000, 5080000, 9609000]   # not actually needed in this exercise...
-   fishers = [1891, 2652, 3800, 11611, 1757]
-
-   totPop = sum(pop)
-   totFish = sum(fishers)
-
-   # write your solution here
-
-   for i in range(len(countries)):
-      print("%s %.2f%%" % (countries[i], 100.0))    # current just prints 100%
-
-main()
-```
-
+The program would be used by building owners and building maintenance to detect abnormalities in buildings.
 
 ## Data sources and AI methods
-Where does your data come from? Do you collect it yourself or do you use data collected by someone else?
-If you need to use links, here's an example:
-[Twitter API](https://developer.twitter.com/en/docs)
-
-| Syntax      | Description |
-| ----------- | ----------- |
-| Header      | Title       |
-| Paragraph   | Text        |
+There is currently no universal open data on energy consumption for buildings. In the future, there could be an open data source with data from public building owners such as municipalities. For now, all building owners would have to use their own energy consumption data. For larger municipalities, it is hundreds to thousands of buildings and that could be enough for a reliable model. Energy companies also have large stores of data. Main energy meters of buildings are mostly used on the basis of invoicing. Other suitable data are weather data from the National Weather Service and building data.
+I would use linear regression where the variables are things like outside temperature (hourly data), wind speed (hourly data) and solar radiation (hourly data) from a weather dataset. Other necessary variables are building size (area or volume), indoor temperature, year of construction and number of users. The assumed values would be the consumption of heat and electricity. The program would compare the predicted value with the actual value and report any deviations. The program also compares different building coefficient values with each other and estimates buildings that have abnormal values. If the program had access to the building management system, even more variables could be used.
 
 ## Challenges
-
-What does your project _not_ solve? Which limitations and ethical considerations should be taken into account when deploying a solution like this?
+The program does not fix real bugs that would need to be done manually. It can also be very difficult to correctly estimate the exact error without very detailed monitoring in the building, and getting data from the building management system into the AI program can be challenging. An early build of the program could produce a list of errors that fit the characteristics of the data.
 
 ## What next?
-
-How could your project grow and become something even more? What kind of skills, what kind of assistance would you  need to move on? 
-
+The next step of the program could be to influence the design of future buildings from the learned data of existing buildings. The program could analyze existing buildings to determine what works and what doesn't, and give guidance to designers of new buildings.
 
 ## Acknowledgments
-
-* list here the sources of inspiration 
-* do not use code, images, data etc. from others without permission
-* when you have permission to use other people's materials, always mention the original creator and the open source / Creative Commons licence they've used
-  <br>For example: [Sleeping Cat on Her Back by Umberto Salvagnin](https://commons.wikimedia.org/wiki/File:Sleeping_cat_on_her_back.jpg#filelinks) / [CC BY 2.0](https://creativecommons.org/licenses/by/2.0)
-* etc
+ https://github.com/MPa-Engineering/AI-Energy-Manager 
